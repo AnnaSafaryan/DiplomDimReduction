@@ -1,1 +1,33 @@
 # DiplomDimReduction
+
+* data
+  * corpus
+    * msmarco
+      - corpus_test.parquet
+      - corpus_test.json
+      - queries_test.parquet
+      - queries_test.json
+      - qrels_test.parquet
+      - data_test.parquet
+    * quora
+    * hotpotqa
+  * vectors
+    * dpr
+      * msmarco
+        - corpus_test.npz
+        - queries_test.npz
+      * quora
+      * hotpotqa
+    * ance
+      * msmarco
+        - corpus_test.npz
+        - queries_test.npz
+      * quora
+      * hotpotqa
+    * tabs
+      * msmarco
+        - corpus_test.npz
+        - queries_test.npz
+      * quora
+      * hotpotqa
+
