@@ -172,4 +172,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+*.parquet
+*.json
 *.npz
+*.joblib
+*.pt
