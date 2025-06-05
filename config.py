@@ -1,14 +1,21 @@
 config_dict = {
-    "datasphere_prefix": '/home/jupyter/work/resources/DiplomDimReduction/',
+    "datasphere_prefix": '/home/jupyter/work/resources/DiplomDimReduction',
     "google_prefix": '/content/drive/MyDrive/Colab Notebooks/Diplom',
+    
     "data_prefix": "data",
     "raw_prefix": "raw",
     "vectors_prefix": "vectors",
     "models_prefix": "models",
+    "metrics_prefix": "metrics",
+    "plots_prefix": "plots",
+    "preds_prefix": "predictions",
+    
     "marco_prefix": "marco",
+    
     "dpr_prefix": "dpr",
     "ance_prefix": "ance",
     "tas-b_prefix": "tas_b",
+    "s-bert_prefix": "sbert",
     "late interaction prefix": "colbert",
     "re-ranking prefix": "re_ranking",
 
@@ -22,6 +29,7 @@ config_dict = {
     'dpr_model': 'facebook/dpr-question_encoder-multiset-base',
     "ance_model": "sentence-transformers/msmarco-roberta-base-ance-firstp",
     "tas-b_model": "sentence-transformers/msmarco-distilbert-base-tas-b",
+    "s-bert_model": "sentence-transformers/all-MiniLM-L6-v2",
     'colbert_model': 'colbert-ir/colbertv2.0',
     "ce_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
 }
@@ -110,3 +118,31 @@ config_dict['reduction_ae_model_template'] = (config_dict['datasphere_prefix'] +
                                           config_dict['models_prefix'] + '/' +
                              '{}/{}/{}_{}.pt'  # корпус + метод + модель_размерность
                                           )
+
+# МЕТРИКИ
+config_dict['ndcgs_template']  = (config_dict['datasphere_prefix'] + '/' +
+                                          config_dict['data_prefix'] + '/' +
+                                          config_dict['metrics_prefix'] + '/' +
+                             '{}/{}/{}_ndcgs.json'  # корпус + метод + модель
+                                 )
+
+# КАРТИНКИ
+config_dict['boxplot_all_template']  = (config_dict['datasphere_prefix'] + '/' +
+                                          config_dict['data_prefix'] + '/' +
+                                          config_dict['plots_prefix'] + '/' +
+                             '{}/{}/{}_all.png'  # корпус + метод + размерность
+                                 )
+
+config_dict['boxplot_umaps_template']  = (config_dict['datasphere_prefix'] + '/' +
+                                          config_dict['data_prefix'] + '/' +
+                                          config_dict['plots_prefix'] + '/' +
+                             '{}/{}/{}_umaps.png'  # корпус + метод + размерность
+                                 )
+
+
+# ПРЕДСКАЗАНИЯ
+config_dict['preds_template']  = (config_dict['datasphere_prefix'] + '/' +
+                                          config_dict['data_prefix'] + '/' +
+                                          config_dict['preds_prefix'] + '/' +
+                             '{}/{}/{}_predictions.json'  # корпус + метод + размерность
+                                 )
